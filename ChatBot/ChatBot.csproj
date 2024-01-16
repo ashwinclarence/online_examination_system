@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{612B4ABC-21FD-4DBD-9D4E-8E5A04600E23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChatBot</RootNamespace>
+    <AssemblyName>ChatBot</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.Formats">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.Imaging.Formats.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.FFMPEG">
+      <HintPath>C:\Users\anoop\Downloads\C# Use Webcam Application - csharpens.com\C# Use Webcam Application - csharpens.com\Player\bin\Debug\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>C:\Users\anoop\Desktop\AForge.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="AIMLbot">
+      <HintPath>..\..\supports\ChatBotProject-master\ChatBotProject\ChatBotProject\bin\Debug\AIMLbot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddSubject.Designer.cs">
+      <DependentUpon>AdminAddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminApproveStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminApproveStudent.Designer.cs">
+      <DependentUpon>AdminApproveStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteSubject.Designer.cs">
+      <DependentUpon>AdminDeleteSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDeleteTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDeleteTeacher.Designer.cs">
+      <DependentUpon>AdminDeleteTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMessage.Designer.cs">
+      <DependentUpon>AdminMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateSubject.Designer.cs">
+      <DependentUpon>AdminUpdateSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateTeacher.Designer.cs">
+      <DependentUpon>AdminUpdateTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUsers.Designer.cs">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminViewMark.Designer.cs">
+      <DependentUpon>AdminViewMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_AddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_AddTeacher.Designer.cs">
+      <DependentUpon>Admin_AddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Home.Designer.cs">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aimlwriter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aimlwriter.Designer.cs">
+      <DependentUpon>aimlwriter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseConnection.cs" />
+    <Compile Include="botcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="botcheck.Designer.cs">
+      <DependentUpon>botcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chatinbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chatinbox.Designer.cs">
+      <DependentUpon>Chatinbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chatuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chatuser.Designer.cs">
+      <DependentUpon>Chatuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parent_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent_Home.Designer.cs">
+      <DependentUpon>Parent_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parent_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent_Registration.Designer.cs">
+      <DependentUpon>Parent_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Soundcheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Soundcheck.Designer.cs">
+      <DependentUpon>Soundcheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup.Designer.cs">
+      <DependentUpon>Startup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentMessage.Designer.cs">
+      <DependentUpon>StudentMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentOnlineExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentOnlineExam.Designer.cs">
+      <DependentUpon>StudentOnlineExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentProfile.Designer.cs">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentScretCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentScretCode.Designer.cs">
+      <DependentUpon>StudentScretCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentViewExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentViewExam.Designer.cs">
+      <DependentUpon>StudentViewExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentViewMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentViewMark.Designer.cs">
+      <DependentUpon>StudentViewMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentViewSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentViewSubject.Designer.cs">
+      <DependentUpon>StudentViewSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Home.Designer.cs">
+      <DependentUpon>Student_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_Registration.Designer.cs">
+      <DependentUpon>Student_Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherAddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherAddQuestion.Designer.cs">
+      <DependentUpon>TeacherAddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherAssignExam1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherAssignExam1.Designer.cs">
+      <DependentUpon>TeacherAssignExam1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherMessage.Designer.cs">
+      <DependentUpon>TeacherMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherMonitor.Designer.cs">
+      <DependentUpon>TeacherMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSearchStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSearchStudent.Designer.cs">
+      <DependentUpon>TeacherSearchStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherDeleteStudent.Designer.cs">
+      <DependentUpon>TeacherDeleteStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherUpdateQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherUpdateQuestion.Designer.cs">
+      <DependentUpon>TeacherUpdateQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherUpdateResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherUpdateResult.Designer.cs">
+      <DependentUpon>TeacherUpdateResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher_Home.Designer.cs">
+      <DependentUpon>Teacher_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher_students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher_students.Designer.cs">
+      <DependentUpon>Teacher_students.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminAddSubject.resx">
+      <DependentUpon>AdminAddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminApproveStudent.resx">
+      <DependentUpon>AdminApproveStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteSubject.resx">
+      <DependentUpon>AdminDeleteSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDeleteTeacher.resx">
+      <DependentUpon>AdminDeleteTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMessage.resx">
+      <DependentUpon>AdminMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUpdateSubject.resx">
+      <DependentUpon>AdminUpdateSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUpdateTeacher.resx">
+      <DependentUpon>AdminUpdateTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUsers.resx">
+      <DependentUpon>AdminUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminViewMark.resx">
+      <DependentUpon>AdminViewMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_AddTeacher.resx">
+      <DependentUpon>Admin_AddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Home.resx">
+      <DependentUpon>Admin_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aimlwriter.resx">
+      <DependentUpon>aimlwriter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="botcheck.resx">
+      <DependentUpon>botcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat.resx">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chatinbox.resx">
+      <DependentUpon>Chatinbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chatuser.resx">
+      <DependentUpon>Chatuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parent_Home.resx">
+      <DependentUpon>Parent_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parent_Registration.resx">
+      <DependentUpon>Parent_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Soundcheck.resx">
+      <DependentUpon>Soundcheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup.resx">
+      <DependentUpon>Startup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentMessage.resx">
+      <DependentUpon>StudentMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentOnlineExam.resx">
+      <DependentUpon>StudentOnlineExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentProfile.resx">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentScretCode.resx">
+      <DependentUpon>StudentScretCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentViewExam.resx">
+      <DependentUpon>StudentViewExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentViewMark.resx">
+      <DependentUpon>StudentViewMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentViewSubject.resx">
+      <DependentUpon>StudentViewSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Home.resx">
+      <DependentUpon>Student_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_Registration.resx">
+      <DependentUpon>Student_Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherAddQuestion.resx">
+      <DependentUpon>TeacherAddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherAssignExam1.resx">
+      <DependentUpon>TeacherAssignExam1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherMessage.resx">
+      <DependentUpon>TeacherMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherMonitor.resx">
+      <DependentUpon>TeacherMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSearchStudent.resx">
+      <DependentUpon>TeacherSearchStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherDeleteStudent.resx">
+      <DependentUpon>TeacherDeleteStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherUpdateQuestion.resx">
+      <DependentUpon>TeacherUpdateQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherUpdateResult.resx">
+      <DependentUpon>TeacherUpdateResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher_Home.resx">
+      <DependentUpon>Teacher_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher_students.resx">
+      <DependentUpon>Teacher_students.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29 copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default-profile-pic-png-8 copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ProfilePictures\Thumbnails\102.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sed-08_2236076 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Sed-08_2236076 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reviewer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.people.status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.people.multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.email.hardedge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.door.lock.open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appbar.power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chatbot-design-320x202 copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chatbot-design-320x202 copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanceBot-3-LG.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\old_robot.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_30144137iJGmGE90.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-robot-humanoid-three-dimensional-space-3d-computer-robotics-5ab92394af7a39.1435758715220827087188.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\side-robot %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\as1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robot-PNG-Image-HD copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_30144137iJGmGE901.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ironman_head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assistant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\read_message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\read_message1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-robot-humanoid-three-dimensional-space-3d-computer-robotics-5ab92394af7a39.14357587152208270871881.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\side-robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\side-robot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_V5sYP6PrBmL0-819CIBUbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chatbot-assistant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\talking-gif-animation-4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\source.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\source1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZAbi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LMCST-collegelogo copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cute-robot-hold-laptop-computer-chat-bot-robotic-girl-isolated-icon-blue-background_48369-13457 copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fron5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu_wireframe-wallpaper-1366x768.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
